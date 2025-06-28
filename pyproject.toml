@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "javadoc2md"
+version = "0.1.0"
+description = "Convert Java Javadoc HTML to Markdown directory structure. Purpose-built for AI code assistants and LLMs."
+authors = [
+    {name = "JL Bauer", email = "bauer.j@gmail.com"}
+]
+dependencies = [
+    "beautifulsoup4",
+    "markdownify",
+    "tqdm",
+    "requests"
+]
+requires-python = ">=3.8"
+keywords = ["javadoc", "markdown", "ai", "llm", "documentation", "developer-tools", "context", "code-assistant"]
+
+[project.scripts]
+javadoc2md = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
